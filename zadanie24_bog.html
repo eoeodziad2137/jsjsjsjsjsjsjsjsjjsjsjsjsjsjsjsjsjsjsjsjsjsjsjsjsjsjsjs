@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            background-color: lightgray;
+            color: blue;
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <script>
+
+            var x1_bog = prompt("x1_bog=", " ");
+            var x1 = parseFloat(x1_bog);
+
+            var x2_bog = prompt("x2_bog=", " ");
+            var x2 = parseFloat(x2_bog);
+
+            var rad = (x1 * Math.PI) / 180;
+
+            var y1 = 3 * Math.pow(x1, (6 / 8));
+            var y2 = 2 * Math.cos(rad) + 3 * Math.sin(rad);
+            var y3 = Math.cbrt((Math.pow(x1, 5) + 2 * Math.pow(x2, 4)) * Math.abs(x1 - x2));
+
+            document.write("x1=" + x1 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+            document.write("x2=" + x2 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+            document.write("<br>");
+            document.write("x1=" + x1 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+            document.write("x1=" + rad.toFixed(2));
+            document.write("<br>");
+            document.write("y1=" + y1.toFixed(2));
+            document.write("<br>");
+            document.write("y2=" + y2.toFixed(2));
+            document.write("<br>");
+            document.write("y3=" + y3.toFixed(2));
+
+
+
+        </script>
+    </div>
+
+</body>
+
+</html>

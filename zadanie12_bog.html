@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <script language="JavaScript">
+        var d1_bog = prompt("d1", "");
+        var g1_bog = prompt("dg", "");
+        var d2_bog = prompt("d2", "");
+        var g2_bog = prompt("g2", "");
+
+        var sekund;
+
+        var a=parseFloat(d1_bog);
+        var b=parseFloat(g1_bog);
+        var c=parseFloat(d2_bog);
+        var d=parseFloat(g2_bog);
+
+        var sekund = (a-c)*86400+(b-d)*3600;
+
+        document.write("Ilość sekund= "+sekund+" sekund");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <textarea name="" id="" cols="50" rows="100"><html>
+
+        <head>
+            <title>
+                Przykład obliczenia pola i obwodu prostokata
+            </title>
+            <script language="JavaScript">
+
+                function p(a, b) {
+                    a_bog = parseFloat(a)
+                    b_bog = parseFloat(b)
+                    p_wynik = a_bog * b_bog
+                    document.getElementsByName('pol')[0].value = p_wynik.toFixed(2); 
+                    alert("pole=" + p_wynik.toFixed(2) + " cm^3");
+                    pokaz1.innerHTML = "pole=" + p_wynik.toFixed(2) + " cm^3" + "<br>";
+                }
+                function o(a, b) {
+                    a_bog = parseFloat(a)
+                    b_bog = parseFloat(b)
+                    o_wynik = 2 * a_bog + 2 * b_bog
+                    document.getElementsByName('obw')[0].value = o_wynik.toFixed(2);
+                    alert("obwod=" + o_wynik.toFixed(2) + " cm^2");
+                    pokaz2.innerHTML = "obwod=" + o_wynik.toFixed(2) + "cm";
+                }
+            </script>
+        </head>
+        
+        <body>
+            Obliczanie obwodu i pola prostokata
+            <br> <br>
+            <form name="formularz" action="..."
+                onsubmit="p(this.a_bog.value,this.b_bog.value); o(this.a_bog.value,this.b_bog.value);return false">
+                Podaj a=
+                <input size="6" name="a_bog">
+                Podaj b=
+                <input size="6" name="b_bog">
+                <br> <br>
+                <input TYPE="submit" Value="oblicz">
+                <br> <br>
+                pole=
+                <input size="6" name="pol">
+                obwod=
+                <input size="6" name="obw">
+            </form>
+            <table>
+                <tr id="pokaz1"></tr>
+                <tr id="pokaz2"></tr>
+            </table>
+        </body>
+        
+        </html></textarea>
+</body>
+
+</html>

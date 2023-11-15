@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>
+        oblicz dlugosc drabiny i kat
+    </title>
+    <script language="JavaScript">
+
+        function d(d, x) {
+            d_bog = parseFloat(d)
+            x_bog = parseFloat(x)
+            d_wynik = Math.sqrt(x * x + d * d)
+            document.getElementsByName('dra')[0].value = d_wynik.toFixed(2);
+            alert("drabina=" + d_wynik.toFixed(2) + " m");
+            pokaz1.innerHTML = "drabina=" + d_wynik.toFixed(2) + " m" + "<br>"; 
+        }
+
+        function a(d, x) {
+            d_bog = parseFloat(d)
+            x_bog = parseFloat(x)
+
+            a_alfa = Math.atan(d_bog / x_bog)
+
+            a_wynik = (a_alfa * 180) / Math.PI
+
+
+            document.getElementsByName('alf')[0].value = a_wynik.toFixed(2);
+            alert("alfa=" + a_wynik.toFixed(2) + " *");
+            pokaz2.innerHTML = "alfa=" + a_wynik.toFixed(2) + "*";
+        }
+
+    </script>
+</head>
+
+<body>
+    Obliczanie odleglosci od drabiny i kata
+    <br> <br>
+    <form name="formularz" action="..."
+        onsubmit="d(this.d_bog.value,this.x_bog.value); a(this.d_bog.value,this.x_bog.value);return false">
+        Podaj d=
+        <input size="6" name="d_bog">
+        Podaj x=
+        <input size="6" name="x_bog">
+        <br> <br>
+        <input TYPE="submit" Value="oblicz">
+        <br> <br>
+        drabina=
+        <input size="6" name="dra">
+        alfa=
+        <input size="6" name="alf">
+    </form>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body>
+
+</html>

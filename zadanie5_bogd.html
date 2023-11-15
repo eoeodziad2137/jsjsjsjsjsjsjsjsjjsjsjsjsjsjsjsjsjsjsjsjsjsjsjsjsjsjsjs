@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title> </title>
+
+    <meta charset="UTF-8">
+
+
+
+    <script language="JavaScript">
+        function WinOpen_G1() {
+            window.open("Grafika1.html", "okienko_z1", "toolbar=no,directories=no,menubar=no,height=300,width=160,top=500,left=100");
+        }
+        function WinOpen_G2() {
+            window.open("Grafika2.html", "okienko_z2", "toolbar=no,directories=no,menubar=no,height=300,width=160,top=380,left=300");
+        }
+        function WinOpen_G3() {
+            window.open("Grafika3.html", "okienko_z3", "toolbar=no,directories=no,menubar=no,height=300,width=160,top=220,left=500");
+        }
+        function WinOpen_G4() {
+            window.open("Grafika4.html", "okienko_z4", "toolbar=no,directories=no,menubar=no,height=300,width=160,top=100,left=700");
+        }
+        function okno_zamknij() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+
+        <p style="font-size: 2cm; color: red;">Wykonał Stanisław Bogdan mój numer w dzienniiku 26, czyli mam układ
+            [(4)mod 4 = 0], czyli mam układ 3</p>
+        <form>
+            <input type="button_z3" name="Grafika 1" value="Grafika 1" onclick="WinOpen_G1(' ')">
+            <input type="button_z4" name="Grafika 2" value="Grafika 2" onclick="WinOpen_G2(' ')">
+            <input type="button_z5" name="Grafika 3" value="Grafika 3" onclick="WinOpen_G3(' ')">
+            <input type="button_z5" name="Grafika 4" value="Grafika 4" onclick="WinOpen_G4(' ')">
+            <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
+        </form>
+    </center>
+</body>
+
+</html>

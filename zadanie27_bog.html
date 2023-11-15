@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+    <form name="formularz"
+        onsubmit="wysokoscikat(this.a_odleglosc.value, this.b_kat.value, this.c_droga.value); return false">
+
+        Odległość między Arturem a Dawidem:
+        <input name="a_odleglosc" placeholder="Wprowadź odległość">
+
+        <br>
+
+        Kąt startu samolotu:
+        <input name="b_kat" placeholder="Wprowadź kąt">
+
+        <br>
+
+        Droga samolotu nad Dawidem:
+        <input name="c_droga" placeholder="Wprowadź drogę">
+
+        <br>
+
+        <input type="submit" value="oblicz">
+
+        <br>
+
+        Wysokość=
+        <input name="wysokosc" readonly>
+        <br>
+        Kat startu=
+        <input name="kacik" readonly>
+
+    </form>
+
+    <script>
+        function wysokoscikat(a, b, c) {
+            var odl_bog = parseFloat(a);
+            var kat_bog = parseFloat(b);
+            var s_bog = parseFloat(c);
+
+            var kat_rad = (Math.PI / 180) * kat_bog;
+            var h_bog = odl_bog * Math.tan(kat_rad);
+
+            var kat_startu_rad = Math.atan(h_bog / s_bog);
+            var kat_startu_deg = (180 / Math.PI) * kat_startu_rad;
+
+            document.getElementsByName('wysokosc')[0].value = "Wysokość: " + h_bog.toFixed(2);
+            document.getElementsByName('kacik')[0].value = "Kat startu: " + kat_startu_deg.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>

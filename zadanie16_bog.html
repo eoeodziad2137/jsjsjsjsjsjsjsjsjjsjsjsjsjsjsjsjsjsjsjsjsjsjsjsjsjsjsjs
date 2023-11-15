@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var a_bog = prompt("a_bog=", "");
+        var b_bog = prompt("b_bog=", "");
+
+        var a = parseFloat(a_bog);
+        var b = parseFloat(b_bog);
+
+        document.write("wczytane liczby:    A=" + a_bog + "    B=" + b_bog + "");
+        document.write("<br>");
+        document.write("<br>");
+
+        var a1 = (a + b) * (a + b) * (a + b);
+        var a2 = a * a * a;
+        var ab = 3 * (a * a) * b;
+        var bab = 3 * a * (b * b);
+        var b = (b * b * b);
+
+        var a1 = a2 + ab + bab + b;
+
+        document.write("(" + a_bog + " + " + b_bog + ")^3=" + a_bog + "^3 + 3*(" + a_bog + ")^2)*(" + b_bog + ") + 3*(" + a_bog + ")*((" + b_bog + ")^2) + " + b_bog + "^3 =" + a2 + " + " + ab + " + " + bab + " + " + b + " = " + a1 + "");
+    </script>
+</body>
+
+</html>

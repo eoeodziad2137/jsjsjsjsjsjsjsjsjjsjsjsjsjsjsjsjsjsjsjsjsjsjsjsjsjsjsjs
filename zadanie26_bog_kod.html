@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <textarea name="" id="" cols="50" rows="60"><html>
+
+        <head>
+        
+            <script language="JavaScript">
+
+                function p(a, b, h) {
+                    a_bog = parseFloat(a);
+                    b_bog = parseFloat(b);
+                    h_bog = parseFloat(h);
+
+                    Math.abs(a_bog);
+                    Math.abs(b_bog);
+                    Math.abs(h_bog);
+
+                    pole_wynik = 0.5 * (a_bog + b_bog) * h_bog;
+
+                    document.getElementsByName('pol')[0].value = pole_wynik.toFixed(2);
+
+                    pokaz1.innerHTML = "pole=" + pole_wynik.toFixed(2) + " cm^2" + "<br>";
+                }
+                function o(a, b, h) {
+                    a_bog = parseFloat(a);
+                    b_bog = parseFloat(b);
+                    h_bog = parseFloat(h);
+
+                    Math.abs(a_bog);
+                    Math.abs(b_bog);
+                    Math.abs(h_bog);
+
+                    var ramie = Math.sqrt(Math.pow((a_bog - b_bog) / 2, 2) + Math.pow(h_bog, 2));
+
+                    obwod_wynik = a_bog + b_bog + 2 * ramie;
+
+                    document.getElementsByName('obw')[0].value = obwod_wynik.toFixed(2);
+
+                    pokaz2.innerHTML = "obwod=" + obwod_wynik.toFixed(2) + "cm";
+                }
+            </script>
+        </head>
+        
+        <body>
+            <br> <br>
+            <form name="formularz" action="..."
+                onsubmit="p(this.a_bog.value,this.b_bog.value,this.h_bog.value); o(this.a_bog.value,this.b_bog.value,this.h_bog.value);return false">
+                Podaj a=
+                <input size="6" name="a_bog">
+                Podaj b=
+                <input size="6" name="b_bog">
+                Podaj h=
+                <input size="6" name="h_bog">
+                <br> <br>
+                <input TYPE="submit" Value="oblicz">
+                <br> <br>
+                pole=
+                <input size="6" name="pol">
+                obwod=
+                <input size="6" name="obw">
+            </form>
+            <table>
+                <tr id="pokaz1"></tr>
+                <tr id="pokaz2"></tr>
+            </table>
+        </body>
+        
+        </html></textarea>
+</body>
+
+</html>

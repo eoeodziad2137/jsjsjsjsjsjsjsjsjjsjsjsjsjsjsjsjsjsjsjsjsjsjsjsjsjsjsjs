@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <textarea name="" id="" cols="50" rows="70"><html>
+
+        <head>
+            <script language="JavaScript">
+                function AB_bog() {
+                    var xa_bog = parseFloat(document.getElementById('xa').value);
+                    var ya_bog = parseFloat(document.getElementById('ya').value);
+
+                    var xb_bog = parseFloat(document.getElementById('xb').value);
+                    var yb_bog = parseFloat(document.getElementById('yb').value);
+
+                    var wyn_bog = Math.sqrt(Math.pow((xa_bog - xb_bog), 2) + Math.pow((ya_bog - yb_bog), 2));
+
+                    document.getElementById("nazwa").innerHTML = "Dlugosc boku AB = " + wyn_bog.toFixed(2) + " cm";
+                }
+
+                function BC_bog() {
+                    var xb_bog = parseFloat(document.getElementById('xb').value);
+                    var yb_bog = parseFloat(document.getElementById('yb').value);
+
+                    var xc_bog = parseFloat(document.getElementById('xc').value);
+                    var yc_bog = parseFloat(document.getElementById('yc').value);
+
+                    var wyn_bog = Math.sqrt(Math.pow((xb_bog - xc_bog), 2) + Math.pow((yb_bog - yc_bog), 2));
+
+                    document.getElementById("nazwa").innerHTML = "Dlugosc boku BC = " + wyn_bog.toFixed(2) + " cm";
+                }
+
+                function AC_bog() {
+                    var xc_bog = parseFloat(document.getElementById('xc').value);
+                    var yc_bog = parseFloat(document.getElementById('yc').value);
+
+                    var xa_bog = parseFloat(document.getElementById('xa').value);
+                    var ya_bog = parseFloat(document.getElementById('ya').value);
+
+                    var wyn_bog = Math.sqrt(Math.pow((xa_bog - xc_bog), 2) + Math.pow((ya_bog - yc_bog), 2));
+
+                    document.getElementById("nazwa").innerHTML = "Dlugosc boku AC = " + wyn_bog.toFixed(2) + " cm";
+                }
+            </script>
+        </head>
+        
+        <body>
+            <br><br>
+            Podaj x punktu A: <input type="text" id="xa" value=""><br><br>
+            Podaj y punktu A: <input type="text" id="ya" value=""><br><br>
+            Podaj x punktu B: <input type="text" id="xb" value=""><br><br>
+            Podaj y punktu B: <input type="text" id="yb" value=""><br><br>
+            Podaj x punktu C: <input type="text" id="xc" value=""><br><br>
+            Podaj y punktu C: <input type="text" id="yc" value=""><br><br>
+        
+            <input type="button" name="xd" value="dlugosc miedzy a i b" onclick="AB_bog()"><br>
+            <input type="button" name="xd" value="dlugosc miedzy b i c" onclick="BC_bog()"><br>
+            <input type="button" name="xd" value="dlugosc miedzy a i c" onclick="AC_bog()"><br>
+        
+        
+            <div style="color:red;font-size:50px;" id="nazwa"></div>
+        
+        </body>
+        
+        </html></textarea>
+</body>
+
+</html>

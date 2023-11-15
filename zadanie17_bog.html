@@ -1,0 +1,94 @@
+<html>
+  <head>
+	<meta charset="utf-8">
+		<script language="JavaScript">
+		    function okno_zamknij()
+			{
+			window.close()
+			}
+    </script>
+  </head>
+ <body>
+        <ol>
+			<li><b>Wymień cztery sposoby wyprowadzania danych w JS,</b></li><br>
+				<br>
+				<ul>
+					<li>z uzyciem dokument.write()</li>
+					<li>z uzyciem okienka alert()</li>
+					<li>do okienek formularza</li>
+					<li>do tabeli</li>
+				</ul>	
+				
+		
+		
+			<br><br><br>
+			
+			<li><b>Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?</b></li><br>
+				<br>
+				<ul>
+					<li>Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy,</li>
+					<li>Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod,</li>
+					<li>Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane np. suma_kry(a, b),</li>
+					<li>Może(nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym return.</li>
+				</ul>
+			
+			
+			<br><br><br>
+			
+			<li><b>Omów metody <u>getElementsByName, getElementById, getElementByTagName</u> (może być w postaci tabeli)</b></li><br>
+				<br>
+				<table>
+				<tr>
+					<td><b>getElementById("id ")</b></td>
+					<td>dostęp do wszystkich elementów o konkretnej wartości atrybutu id</td>
+				</tr>
+				<tr>
+					<td><b>getElementByTagName("znacznik ")</b></td>
+					<td>dostęp do wszystkich elementów o typie znacznika, np. P lub DIV</td>
+				</tr>
+				<tr>
+					<td><b>getElementByName("nazwa")</b></td>
+					<td>dostęp do wszystkich elementów o konkretnej wartości atrybutu</td>
+				</tr>
+				</table>
+			
+			<br><br><br>
+			
+			<li><b>Omów właściwości <u>innerHTML innerText className.</u> (każdą osobno)</b></li><br>
+				<br>
+				<ul>
+					<li><b>innerHTML</b> – jest to właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie, albo usunięcie kodu HTML z danego elementu HTML np. w tabeli,</li>
+					<li><b>innerText</b> – umożliwia określenie ciągu znaków który zostanie umieszczony w elemencie,</li>
+					<li><b>className</b> – umożliwia określenie klasy CSS użytej do prezentacji elementu.</li>
+				</ul>
+				
+				<br>
+				Przyklad:
+				<br>
+				
+				<textarea rows = "17", cols = "90";
+<!DOCTYPE html>
+	<head>
+	<title> Przykłady dostępu do elementów </title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.wyroznienieCzerwone { color: Red; font-weight: 600; }
+	</style>
+	</head>
+  <body>
+	<div id="nazwa"></div>
+	<script>
+			document.getElementById("nazwa").innerHTML = "Witaj";
+			document.getElementById("nazwa").className = "wyroznienieCzerwone";
+	</script>
+   </body>
+				</textarea>
+				<br>
+				
+		<br><br><br>
+		<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+        <br><br><br>
+
+        </ol>
+ </body>
+</html>
